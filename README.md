@@ -15,20 +15,22 @@ Methodology:
 SQLite was used to find the number of blocks (or pages ) in a table ( a page file)
 
 Processing of Simple selection query:	
-for each block i of instructor do
 
-          Load i into buffer pool
+          for each block i of instructor do
 
-end
+                    Load i into buffer pool
+
+          end
 
 Processing of Simple Join query:				
-for each block i of instructor do
+          
+          for each block i of instructor do
 
-    Load i into buffer pool and pin, if already present just  pin 
+              Load i into buffer pool and pin, if already present just  pin 
     
-    for each block d of department do
+              for each block d of department do
     
-        Load d into buffer pool  and pin, if already present  and pin	
+                  Load d into buffer pool  and pin, if already present  and pin	
         
-    end 
-end
+              end 
+          end
